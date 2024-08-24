@@ -5,9 +5,6 @@ import Product from "../screens/Product";
 import LoginForm from "../screens/Forms/LoginForm";
 import { LandingPage } from "../screens/LandingPage";
 
-const basename =
-  import.meta.env.NODE_ENV === "production" ? "/m7_trabajoFinal" : "/";
-
 const routes = createBrowserRouter(
   [
     {
@@ -34,7 +31,7 @@ const routes = createBrowserRouter(
     },
   ],
   {
-    basename: basename,
+    basename: import.meta.env.BASE_URL,
   }
 );
 
