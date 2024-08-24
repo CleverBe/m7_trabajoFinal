@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { saveFormData } from "../../redux/form/formActions";
 import { motion } from "framer-motion";
 import { ModalInfo } from "../../components/ModalInfo";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTypedSelector } from "../../redux/reducers";
 
 const LoginForm = () => {
@@ -17,6 +17,7 @@ const LoginForm = () => {
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const [modalLogout, setModalLogout] = useState(false);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [formStatus, setformStatus] = useState<"success" | "error" | "info">(
     "error"
@@ -29,7 +30,7 @@ const LoginForm = () => {
       return;
     }
     setIsOpen(true);
-    // mod7ReactUSIP
+
     if (values.password === form.password) {
       dispatch(
         saveFormData({
@@ -69,6 +70,7 @@ const LoginForm = () => {
               setModalLogout(false);
               dispatch(saveFormData({ username: "", email: "" }));
               resetForm();
+              inputRef.current?.focus();
             }}
             className="bg-gray-500 text-white font-bold py-1 px-2 rounded"
           >
@@ -96,6 +98,7 @@ const LoginForm = () => {
             <div className="flex flex-col">
               <label htmlFor="username">Username:</label>
               <input
+                ref={inputRef}
                 className="border border-gray-500 rounded-md px-1.5 py-2"
                 type="text"
                 id="username"
