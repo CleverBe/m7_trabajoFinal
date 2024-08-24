@@ -21,6 +21,17 @@ export const LandingPage = () => {
 
       <hr className="mt-5 mb-10 border-t-2 border-green-500" />
 
+      <div className="flex gap-x-2">
+        <p>Componentes funcionales y de clase</p>
+        <p>Uso de React hooks como useState y useEffect</p>
+        <p>Creación de custom hooks como useForm</p>
+        <p>Gestión de variables de estado con useState</p>
+        <p>Gestión de estado global con Redux</p>
+        <p>Integración de Redux con React</p>
+        <p>Manejo de Formularios en React</p>
+        <p>Publicando nuestra Página con GitHub Pages</p>
+      </div>
+
       <h1 className="text-3xl mt-10">Recursos Adicionales</h1>
 
       <hr className="mt-5 mb-10 border-t-2 border-green-500" />
