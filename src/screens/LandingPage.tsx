@@ -39,6 +39,32 @@ export const LandingPage = () => {
       <p>
         Para profundizar en los temas cubiertos, consulta los siguientes
         recursos:{" "}
+        <a
+          href="https://react.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
+          React Documentation
+        </a>
+        ,{" "}
+        <a
+          href="https://reactjs.org/docs/hooks-intro.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
+          React Hooks
+        </a>
+        ,{" "}
+        <a
+          href="https://redux.js.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500"
+        >
+          Redux Documentation
+        </a>
       </p>
     </div>
   );
