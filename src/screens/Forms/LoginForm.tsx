@@ -25,6 +25,9 @@ const LoginForm = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (values.email === "" || values.password === "") {
+      return;
+    }
     setIsOpen(true);
     // mod7ReactUSIP
     if (values.password === form.password) {
